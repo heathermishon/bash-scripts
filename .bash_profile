@@ -8,6 +8,14 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
 
+# git
+alias gm="git mergetool"
+alias gc="git commit -m"
+alias gs="git status"
+alias gb="git branch"
+alias gr="git remote"
+alias gco="git checkout"
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias lanip="ipconfig getifaddr en1"
@@ -50,11 +58,11 @@ fi
 
 # COLOR RULES
 # Attribute codes (ATTR):
-# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed 
-# 
+# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
+#
 # Text color codes (TEXT):
 # 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
-# 
+#
 # Background color codes (BG):
 # 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
 #
@@ -62,9 +70,9 @@ fi
 #
 # For a color list, run ./colors
 
-export DIRECTORY="\033[38;05;226m"
-export GIT="\033[38;05;207m"
-export PROMPT="\033[38;05;196m"
+export DIRECTORY="\033[38;05;222m"
+export GIT="\033[38;05;172m"
+export PROMPT="\033[38;05;88m"
 export RESET="\033[m"
 
 function parse_git_branch {
