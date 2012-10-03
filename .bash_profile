@@ -43,6 +43,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # Path
 PATH=${PATH}:"/usr/local/bin:/usr/local/sbin:usr/local/lib;/usr/local/mysql/bin:$PATH"
 PATH=${PATH}:~/bin
+PATH=${PATH}:.
 
 # Environment Vars
 export LSCOLORS=gxfxcxdxbxggedabagacad
