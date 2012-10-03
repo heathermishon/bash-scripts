@@ -62,11 +62,9 @@ fi
 #
 # For a color list, run ./colors
 
-export COMPUTER="\033[38;05;123m"
-export DIRECTORY="\033[0;32m"
-export USER="\033[38;05;207m"
+export DIRECTORY="\033[38;05;226m"
 export GIT="\033[38;05;207m"
-export PROMPT="\033[38;05;123m"
+export PROMPT="\033[38;05;196m"
 export RESET="\033[m"
 
 function parse_git_branch {
