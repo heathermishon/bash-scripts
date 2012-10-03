@@ -65,7 +65,15 @@ fi
 export COMPUTER="\033[38;05;123m"
 export DIRECTORY="\033[0;32m"
 export USER="\033[38;05;207m"
+export GIT="\033[38;05;207m"
+export PROMPT="\033[38;05;123m"
 export RESET="\033[m"
 
-# export PS1="> \w : "
-PS1="\[$USER\]\u at \[$COMPUTER\]\h in \[$DIRECTORY\]\w\n\$ \[$RESET\]"
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+function ps-1 {
+  PS1="\[$DIRECTORY\]\w \[$GIT\]\$(parse_git_branch)\n\[$PROMPT\]\$ \[$RESET\]"
+}
+ps-1
