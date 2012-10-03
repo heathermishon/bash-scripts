@@ -7,10 +7,12 @@ alias reload="source ~/.bash_profile"
 alias ..="cd .."
 alias ...="cd ../.."
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
+alias ~="cd ~"
 
 # git
 alias gm="git mergetool"
 alias gc="git commit -m"
+alias gca="git commit -am"
 alias gs="git status"
 alias gb="git branch"
 alias gr="git remote"
