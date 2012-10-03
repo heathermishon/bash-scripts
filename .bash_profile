@@ -59,15 +59,13 @@ fi
 # 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
 #
 # Format: "\033[ATTR;TEXT;BGm]" (The last "m" is important)
-export MAGENTA="\033[0;35m"
-export COMPUTER="\033[0;33m"
-export BLUE="\033[0;34m"
-export GREEN="\033[0;32m"
-export PURPLE="\033[4:35m"
-export WHITE="\033[0;37m"
-export USER="\033[0;31m"
-export CYAN="\033[0;36m"
+#
+# For a color list, run ./colors
+
+export COMPUTER="\033[38;05;123m"
+export DIRECTORY="\033[0;32m"
+export USER="\033[38;05;207m"
 export RESET="\033[m"
 
 # export PS1="> \w : "
-PS1="\[$USER\]\u \[$RESET\]at \[$COMPUTER\]\h \[$RESET\]in \[$GREEN\]\w\[$RESET\]\n\$ \[$RESET\]"
+PS1="\[$USER\]\u at \[$COMPUTER\]\h in \[$DIRECTORY\]\w\n\$ \[$RESET\]"
