@@ -48,23 +48,26 @@ if [ -f ~/.bashrc ] ; then
 	. ~/.bashrc
 fi
 
-	MAGENTA=""
-	COMPUTER="\033[0;33m"
-	BLUE="\033[0;34m"
-	GREEN="\033[0;32m"
-	PURPLE="\033[4:35m"
-	WHITE="\033[0;37m"
-	USER="\033[0;31m"
-	RESET="\033[m"
-
-export MAGENTA
-export COMPUTER
-export BLUE
-export GREEN
-export PURPLE
-export WHITE
-export USER
-export RESET
+# COLOR RULES
+# Attribute codes (ATTR):
+# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed 
+# 
+# Text color codes (TEXT):
+# 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
+# 
+# Background color codes (BG):
+# 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
+#
+# Format: "\033[ATTR;TEXT;BGm]" (The last "m" is important)
+export MAGENTA="\033[0;35m"
+export COMPUTER="\033[0;33m"
+export BLUE="\033[0;34m"
+export GREEN="\033[0;32m"
+export PURPLE="\033[4:35m"
+export WHITE="\033[0;37m"
+export USER="\033[0;31m"
+export CYAN="\033[0;36m]"
+export RESET="\033[m"
 
 # export PS1="> \w : "
 PS1="\[$USER\]\u \[$RESET\]at \[$COMPUTER\]\h \[$RESET\]in \[$GREEN\]\w\[$PURPLE\]\n\$ \[$RESET\]"
