@@ -26,23 +26,21 @@ do
 done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-echo "Thanks for installing profile scripts\n"
+echo "Thanks for installing profile scripts"
 
 # Backup existing file
-echo "Backing up current files\n"
+echo "Backing up current files"
 today=`date +%Y%m%d`
 for i in $HOME/.bash_profile $HOME/.bashrc
 do 
   if [ -e $i ] && [ ! -L $i ] 
     then 
-      echo 'Backing up $i\n'
       mv $i $i.$today
   fi
 done
 
 # Set up simlinks
-echo "Setting up simlinks\n"
+echo "Setting up simlinks"
 lnif $DIR/.bash_profile $HOME/.bash_profile
 lnif $DIR/.bashrc $HOME/.bashrc
 
-echo "Done!"
