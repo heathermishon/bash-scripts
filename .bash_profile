@@ -38,7 +38,15 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # Path
-PATH=${PATH}:"/usr/local/bin:/usr/local/sbin:usr/local/lib;/usr/local/mysql/bin:$PATH"
+PATH=/usr/local/bin
+PATH=${PATH}:/usr/local/sbin
+PATH=${PATH}:/usr/local/lib
+PATH=${PATH}:/usr/local/mysql/bin
+PATH=${PATH}:/usr/X11/bin
+PATH=${PATH}:/usr/bin
+PATH=${PATH}:/bin
+PATH=${PATH}:/usr/sbin
+PATH=${PATH}:/sbin
 PATH=${PATH}:~/bin
 PATH=${PATH}:.
 
