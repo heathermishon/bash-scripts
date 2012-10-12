@@ -53,7 +53,7 @@ PATH=${PATH}:.
 # Environment Vars
 export LSCOLORS=gxfxcxdxbxggedabagacad
 export CLICOLOR=1
-export VIM_APP_DIR=/Applications/MacVim-snapshot-62
+export VIM_APP_DIR=/Applications/MacVim-snapshot-65
 
 # git-completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
