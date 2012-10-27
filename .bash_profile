@@ -8,6 +8,9 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
 
+# vim
+alias vif='mvim -S ~/focus.vim'
+
 # git
 alias gm="git mergetool"
 alias gc="git commit -m"
@@ -47,6 +50,7 @@ PATH=${PATH}:/usr/bin
 PATH=${PATH}:/bin
 PATH=${PATH}:/usr/sbin
 PATH=${PATH}:/sbin
+PATH=${PATH}:/Applications/MacVim-snapshot-65/
 PATH=${PATH}:~/bin
 PATH=${PATH}:.
 
@@ -59,6 +63,9 @@ export VIM_APP_DIR=/Applications/MacVim-snapshot-65
 if [ -f `brew --prefix`/etc/bash_completion ]; then
 	. `brew --prefix`/etc/bash_completion
 fi
+
+# Use vim on the command line
+set -o vi
 
 # bashrc
 if [ -f ~/.bashrc ] ; then
