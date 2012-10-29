@@ -10,6 +10,7 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
 
 # vim
 alias vif='mvim -S ~/focus.vim'
+alias vimupdate='vim +BundleInstall! +BundleClean +q'
 
 # git
 alias gm="git mergetool"
