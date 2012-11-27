@@ -69,6 +69,10 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 	. `brew --prefix`/etc/bash_completion
 fi
 
+if [ -f $HOME/.rvm/scripts/rvm ]; then
+	source $HOME/.rvm/scripts/rvm
+fi
+
 # Use vim on the command line
 set -o vi
 
