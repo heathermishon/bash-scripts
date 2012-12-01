@@ -9,6 +9,7 @@ alias ...="cd ../.."
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
 alias ~="cd ~"
 alias edit="sublime ."
+alias clock='watch -t -n1 "date +%H:%M | figlet -f doh -c -w `tput cols`"'
 
 # vim
 alias vif='mvim -S ~/focus.vim'
