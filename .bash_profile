@@ -82,6 +82,9 @@ if [ -f ~/.bashrc ] ; then
 	. ~/.bashrc
 fi
 
+export NODE_PATH="/usr/local/lib/node"
+NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
+
 # COLOR RULES
 # Attribute codes (ATTR):
 # 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed

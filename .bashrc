@@ -43,3 +43,8 @@ else
         start_agent
     fi
 fi
+
+if [ -f ~/.git-flow-completion.sh ] ; then
+	source ~/.git-flow-completion.sh
+fi
+
