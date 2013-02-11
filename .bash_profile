@@ -15,6 +15,7 @@ alias clock='watch -t -n1 "date +%H:%M | figlet -f doh -c -w `tput cols`"'
 alias vif='mvim -S ~/focus.vim'
 alias vimupdate='vim +BundleInstall! +BundleClean +q'
 alias gvim='mvim -f -c "au VimLeave * !open -a Terminal"'
+alias vime='vim -u ~/.encrypted_vim_rc -x'
 
 # git
 alias gm="git mergetool"
