@@ -58,7 +58,7 @@ PATH=${PATH}:/usr/bin
 PATH=${PATH}:/bin
 PATH=${PATH}:/usr/sbin
 PATH=${PATH}:/sbin
-PATH=${PATH}:/Applications/MacVim-snapshot-66/
+PATH=${PATH}:/Applications/MacVim-snapshot-66
 PATH=${PATH}:~/bin
 PATH=${PATH}:.
 
