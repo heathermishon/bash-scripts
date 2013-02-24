@@ -12,6 +12,9 @@ alias edit="sublime ."
 alias clock='watch -t -n1 "date +%H:%M | figlet -f doh -c -w `tput cols`"'
 alias testrw="dd if=/dev/zero bs=1024k of=tstfile count=1024 2>&1 | awk '/sec/ {print $1 / $5 / 1048576, \"MB/sec Write\" }' && purge && dd if=tstfile bs=1024k of=/dev/null count=1024 2>&1 | awk '/sec/ {print $1 / $5 / 1048576, \"MB/sec Read\" }' && rm tstfile"
 
+# weather report
+weather(){ curl -s "http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=${@:-"$1"}"|perl -ne '/<title>([^<]+)/&&printf "\x1B[0;34m%s\x1B[0m: ",$1;/<fcttext>([^<]+)/&&print $1,"\n"';}
+
 # vim
 alias vif='mvim -S ~/focus.vim'
 alias vimupdate='vim +BundleInstall! +BundleClean +q'
