@@ -11,7 +11,8 @@ alias ~="cd ~"
 alias edit="sublime ."
 alias clock='watch -t -n1 "date +%H:%M | figlet -f doh -c -w `tput cols`"'
 alias testrw="dd if=/dev/zero bs=1024k of=tstfile count=1024 2>&1 | awk '/sec/ {print $1 / $5 / 1048576, \"MB/sec Write\" }' && purge && dd if=tstfile bs=1024k of=/dev/null count=1024 2>&1 | awk '/sec/ {print $1 / $5 / 1048576, \"MB/sec Read\" }' && rm tstfile"
-alias tunnel="java -jar ~/bin/BrowserStackTunnel.jar 8vlzgcB58bVTdLITt514 localhost,80,0"
+alias browserstack="java -jar ~/bin/BrowserStackTunnel.jar 8vlzgcB58bVTdLITt514 localhost,80,0"
+alias veevastart="git clean -xfd && ant clean && ant globals && ant && ant thumbs && open . && open source/index.html"
 
 # weather report
 weather(){ curl -s "http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=${@:-"$1"}"|perl -ne '/<title>([^<]+)/&&printf "\x1B[0;34m%s\x1B[0m: ",$1;/<fcttext>([^<]+)/&&print $1,"\n"';}
