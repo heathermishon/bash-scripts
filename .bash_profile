@@ -64,14 +64,14 @@ PATH=${PATH}:/usr/bin
 PATH=${PATH}:/bin
 PATH=${PATH}:/usr/sbin
 PATH=${PATH}:/sbin
-PATH=${PATH}:/Applications/MacVim-snapshot-66
+PATH=${PATH}:/usr/local/Cellar/macvim/7.3-65/bin
 PATH=${PATH}:~/bin
 PATH=${PATH}:.
 
 # Environment Vars
 export LSCOLORS=gxfxcxdxbxggedabagacad
 export CLICOLOR=1
-export VIM_APP_DIR=/Applications/MacVim-snapshot-66
+export VIM_APP_DIR=/usr/local/Cellar/macvim/7.3-65/bin
 
 # git-completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
