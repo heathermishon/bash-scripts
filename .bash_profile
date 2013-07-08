@@ -66,6 +66,7 @@ PATH=${PATH}:/bin
 PATH=${PATH}:/usr/sbin
 PATH=${PATH}:/sbin
 PATH=${PATH}:/usr/local/Cellar/macvim/7.3-65/bin
+PATH=${PATH}:/usr/local/Cellar/macvim/7.3-66/bin
 PATH=${PATH}:~/bin
 PATH=${PATH}:.
 
