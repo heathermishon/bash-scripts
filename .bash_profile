@@ -119,7 +119,7 @@ function parse_git_branch {
 }
 
 function ps-1 {
-  PS1="\[$DIRECTORY\]\w \[$GIT\]\$(parse_git_branch)\n\[$PROMPT\]\$ \[$RESET\]"
+  PS1="\[$DIRECTORY\]\w \[$GIT\]\$(parse_git_branch)\n\[$PROMPT\]→ \[$RESET\]"
 }
 ps-1
 
