@@ -70,14 +70,19 @@ PATH=${PATH}:/usr/local/Cellar/macvim/7.3-66/bin
 PATH=${PATH}:~/bin
 PATH=${PATH}:.
 
+# Test if executable exists
+exists() { type -t "$1" > /dev/null 2>&1; }
+
 # Environment Vars
 export LSCOLORS=gxfxcxdxbxggedabagacad
 export CLICOLOR=1
 export VIM_APP_DIR=/usr/local/Cellar/macvim/7.3-65/bin
 
 # git-completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-	. `brew --prefix`/etc/bash_completion
+if exists brew; then
+    if [ -f `brew --prefix`/etc/bash_completion ]; then
+        . `brew --prefix`/etc/bash_completion
+    fi
 fi
 
 if [ -f $HOME/.rvm/scripts/rvm ]; then
