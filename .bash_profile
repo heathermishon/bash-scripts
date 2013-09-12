@@ -114,17 +114,19 @@ NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 #
 # For a color list, run ./colors
 
-export DIRECTORY="\033[38;05;222m"
-export GIT="\033[38;05;172m"
-export PROMPT="\033[38;05;88m"
-export RESET="\033[m"
+export DIRECTORY_COLOR="\033[38;05;222m"
+export GIT_COLOR="\033[38;05;172m"
+export PROMPT_COLOR="\033[38;05;88m"
+export USER_COLOR="\033[38;05;8m"
+export HOST_COLOR="\033[38;05;8m"
+export RESET_COLOR="\033[m"
 
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 function ps-1 {
-  PS1="\[$DIRECTORY\]\w \[$GIT\]\$(parse_git_branch)\n\[$PROMPT\]→ \[$RESET\]"
+  PS1="\[$DIRECTORY_COLOR\]\w \[$GIT_COLOR\]\$(parse_git_branch)\n\[$USER_COLOR\]\u\[$RESET_COLOR\]@\[$HOST_COLOR\]\h\[$PROMPT_COLOR\]→ \[$RESET_COLOR\]"
 }
 ps-1
 
