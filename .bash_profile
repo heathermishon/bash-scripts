@@ -65,8 +65,8 @@ PATH=${PATH}:/usr/bin
 PATH=${PATH}:/bin
 PATH=${PATH}:/usr/sbin
 PATH=${PATH}:/sbin
-PATH=${PATH}:/usr/local/Cellar/macvim/7.3-65/bin
-PATH=${PATH}:/usr/local/Cellar/macvim/7.3-66/bin
+PATH=${PATH}:/usr/local/Cellar/vim/7.4.027/bin
+PATH=${PATH}:/usr/local/Cellar/macvim/7.4-71/bin
 PATH=${PATH}:~/bin
 PATH=${PATH}:.
 
@@ -76,7 +76,7 @@ exists() { type -t "$1" > /dev/null 2>&1; }
 # Environment Vars
 export LSCOLORS=gxfxcxdxbxggedabagacad
 export CLICOLOR=1
-export VIM_APP_DIR=/usr/local/Cellar/macvim/7.3-65/bin
+export VIM_APP_DIR=/usr/local/Cellar/vim/7.4.027/bin
 
 # git-completion
 if exists brew; then
@@ -129,8 +129,3 @@ function ps-1 {
   PS1="\[$DIRECTORY_COLOR\]\w \[$GIT_COLOR\]\$(parse_git_branch)\n\[$USER_COLOR\]\u\[$RESET_COLOR\]@\[$HOST_COLOR\]\h\[$PROMPT_COLOR\]→ \[$RESET_COLOR\]"
 }
 ps-1
-
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
