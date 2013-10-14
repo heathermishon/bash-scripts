@@ -21,7 +21,7 @@ weather(){ curl -s "http://api.wunderground.com/auto/wui/geo/ForecastXML/index.x
 
 # vim
 alias vif='mvim -S ~/focus.vim'
-alias vimupdate='vim +BundleInstall! +BundleClean +q'
+alias vimupdate='cd ~/.spf13-vim-3/ && git pull && cd - && vim +BundleInstall! +BundleClean +q'
 alias gvim='mvim -f -c "au VimLeave * !open -a Terminal"'
 alias vime='vim -u ~/.vimrc.encryption.local -x'
 
