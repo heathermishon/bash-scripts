@@ -9,6 +9,8 @@ alias ...="cd ../.."
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
 alias ~="cd ~"
 alias edit="sublime ."
+alias work="cd ~/Sites/git/work/"
+alias o="open ."
 alias clock='watch -t -n1 "date +%H:%M | figlet -f doh -c -w `tput cols`"'
 alias testrw="dd if=/dev/zero bs=1024k of=tstfile count=1024 2>&1 | awk '/sec/ {print $1 / $5 / 1048576, \"MB/sec Write\" }' && purge && dd if=tstfile bs=1024k of=/dev/null count=1024 2>&1 | awk '/sec/ {print $1 / $5 / 1048576, \"MB/sec Read\" }' && rm tstfile"
 alias browserstack="java -jar ~/bin/BrowserStackTunnel.jar 8vlzgcB58bVTdLITt514 localhost,80,0"
