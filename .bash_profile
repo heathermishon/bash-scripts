@@ -56,7 +56,7 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # Path
-PATH=/usr/local/bin
+PATH=${PATH}:/usr/local/bin
 PATH=${PATH}:/usr/local/sbin
 PATH=${PATH}:/usr/local/lib
 PATH=${PATH}:/usr/local/mysql/bin
@@ -65,8 +65,6 @@ PATH=${PATH}:/usr/bin
 PATH=${PATH}:/bin
 PATH=${PATH}:/usr/sbin
 PATH=${PATH}:/sbin
-PATH=${PATH}:/usr/local/Cellar/vim/7.4.027/bin
-PATH=${PATH}:/usr/local/Cellar/macvim/7.4-71/bin
 PATH=${PATH}:~/bin
 PATH=${PATH}:.
 
@@ -129,3 +127,12 @@ function ps-1 {
   PS1="\[$DIRECTORY_COLOR\]\w \[$GIT_COLOR\]\$(parse_git_branch)\n\[$USER_COLOR\]\u\[$RESET_COLOR\]@\[$HOST_COLOR\]\h\[$PROMPT_COLOR\]→ \[$RESET_COLOR\]"
 }
 ps-1
+
+##
+# Your previous /Users/heathermishon/.bash_profile file was backed up as /Users/heathermishon/.bash_profile.macports-saved_2014-01-02_at_15:58:34
+##
+
+# MacPorts Installer addition on 2014-01-02_at_15:58:34: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+

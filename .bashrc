@@ -52,3 +52,5 @@ export PATH=$PATH:~/android/android-sdk-macosx/tools
 export PATH=$PATH:~/android/android-sdk-macosx/platform-tools
 export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/Current/bin
 export ANDROID_HOME=~/android/android-sdk-macosx
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
